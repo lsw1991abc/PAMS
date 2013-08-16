@@ -1,0 +1,169 @@
+body{
+	background-color:#E0E2E4;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	margin:0;
+	padding:0;
+	color:#333;
+}
+a{
+	text-decoration:none;
+}
+a:hover{
+	text-decoration:underline;
+}
+div, p, span, label, input, textarea, img, form, h1, h2, h3, h4, h5, h6{
+	margin:0;
+	padding:0;
+}
+ul{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+.spacer{
+	clear:both;
+}
+span{
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow: hidden;
+}
+/*--------------------*/
+#header, #footer{
+	width:100%;
+	min-width:1000px;
+	color:#999;
+}
+#header{
+	background-image:url(../image/header_bg.png);
+}
+#footer{
+	background-color:#1E1E1E;
+}
+#header .main, #footer .main{
+	position:relative;
+	width:1000px;
+	min-width:1000px;
+	margin:0 auto;
+}
+#header .main{
+	height:66px;
+}
+#footer .main{
+	height:190px;
+}
+.logo, .nav{
+	height:52px;
+	position:absolute;
+	top:3px;
+}
+.logo{
+	background-image:url(/pams/image/logo.png);
+	background-repeat:no-repeat;
+	width:320px;
+}
+.nav{
+	right:0;
+}
+.nav ul li{
+	display:block;
+	float:left;
+	font-size:16px;
+	margin:auto 12px;
+	line-height:52px;
+}
+.nav ul .li_split{
+	color:#CCC;
+	width:1px;
+	margin:0 10px;
+}
+.nav ul li a, #header  span{
+	color:#CCC;
+}
+.nav ul li a:hover, #header  span:hover{
+	color:#F90;
+	text-decoration:none;
+}
+.nav ul .shortcut{
+	text-align:center;
+	width:110px;
+}
+.nav ul .shortcut ul{
+	display:none;
+	position:relative;
+	color:#FFF;
+	background:#000;
+	opacity:0.85;
+	filter:alpha(opacity=85);
+	z-index:30;
+	padding-top:6px;
+}
+.nav ul .shortcut ul li{
+	margin:0;
+	height:35px;
+	line-height:35px;
+	width:100%;
+	float:none;
+	border-bottom:1px solid #EEE;
+}
+/*---end header---*/
+/*---footer---*/
+
+#footer a{
+	color:#999;
+}
+#footer a:hover{
+	color:#F89500;
+}
+#footer span{
+	font-size:16px;
+	color:#FFF;
+}
+#footer .main div{
+	position:absolute;
+	top:20px;
+	padding-left:20px;
+	border-left:1px dashed #999;
+	height:70%;
+}
+#footer .about{
+	left:120px;
+	width:150px;
+}
+#footer .help{
+	left:290px;
+	width:150px;
+}
+#footer .service{
+	left:480px;
+	width:200px;
+}
+#footer .copyright{
+	left:700px;
+	width:200px;
+}
+#shade, #shade_content{
+	position: fixed!important;
+	position: absolute;
+	display:none;
+}
+#shade{
+	background-color: Gray;
+	opacity: 0.5;
+	filter: alpha(opacity = 50); /* IE6 */
+	-moz-opacity: 0.5; /* Mozilla */
+	-khtml-opacity: 0.5; /* Safari */
+	top:0;
+	left:0;
+	z-index:120;
+}
+#shade_content{
+	background-color: #FFF;
+	width:940px;
+	top:30px;
+	z-index:130;
+	overflow:auto;
+	padding:0 20px;
+}
+/*---end footer---*/

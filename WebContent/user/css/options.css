@@ -1,0 +1,132 @@
+/*---main---*/
+#main{
+	width:1000px;;
+	min-width:1000px;
+	margin:15px auto;
+	background-color:#FFF;
+	padding:20px 0 10px 0;
+	position:relative;
+}
+#main .main_head{
+	height:33px;
+	width:1000px;
+	border-bottom:5px solid #F2580C;
+	font-size:20px;
+	font-weight:bolder;
+}
+#main .main_head ul{
+	margin-left:150px;
+}
+#main .main_head li{
+	display:block;
+	float:left;
+	margin:0 25px;
+	cursor:pointer;
+}
+#main .main_head a{
+	color:#000;
+}
+#main .main_head li.focus{
+	color:#F2580C;
+	text-decoration:none;
+}
+#main .main_body{
+	margin:10px 10px 0 10px;
+	background:url(../image/left-bg.png) repeat-y left top;
+}
+#main .main_left{
+	float:left;
+	width:175px;
+	padding:10px 0 0 35px;
+}
+#main .main_left ul li{
+	font-size:15px;
+	display:block;
+	line-height:30px;
+	margin:5px 0;
+	padding:5px 0 5px 20px;
+	cursor:pointer;
+	border:2px solid #F1F1F1;
+}
+#main .main_left ul li.selected{
+	background-color:#FFF;
+	z-index:2;
+	position:relative;
+	left:3px;
+	text-align:center;
+	border:2px solid #666;
+	border-right:none;
+	font-weight:bolder;
+}
+#main .main_content{
+	float:right;
+	width:750px;
+	min-height:400px;
+}
+#main .main_content ul{
+	display:block;
+}
+#main .main_content ul li{
+	display:block;
+	height:40px;
+	line-height:40px;
+	font-size:16px;
+	border-bottom:1px solid #f1f1f1;
+}
+#main .main_content ul li span, #main .main_content ul li label{
+	display:block;
+	float:left;
+	height:40px;
+	line-height:40px;
+}
+#main .main_content ul li label{
+	width:100px;
+}
+#main .main_content ul li input{
+	display:block;
+	border:1px solid #eee;
+	margin-top:7px;
+	height:25px;
+	line-height:25px;
+	width:260px;
+}
+/*资产账号设置*/
+#main .main_content ul li span{
+	float:left;
+	display:block;
+}
+#main .main_content ul li span.assets_add{
+	width:100px;
+	float:right;
+	cursor:pointer;
+}
+#main .main_content ul li span.assets_add:hover{
+	text-decoration:underline;
+	color:orange;
+}
+#main .main_content ul li span.assets_type{
+	font-weight:bolder;
+	width:500px;
+}
+#main .main_content ul li span.item_title{
+	margin-left:20px;
+	width:300px;
+}
+#main .main_content ul li span.item_account{
+	text-align:center;
+	width:200px;
+}
+#main .main_content ul li span.item_balance{
+	text-align:center;
+	width:150px;
+}
+#main .main_content ul li span.item_edit{
+	text-align:center;
+	width:80px;
+	cursor:pointer;
+}
+#main .main_content ul li span.item_edit:hover{
+	text-decoration:underline;
+	color:orange;
+}
+/*---end main---*/

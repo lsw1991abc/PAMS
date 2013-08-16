@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<constant name="struts.i18n.encoding" value="utf-8" />
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="true" />
+    <!-- Struts2交由Spring管理 -->
+    <constant name="struts.objectFactory" value="spring" />
+    <constant name="struts.multipart.saveDir" value="/tmp"></constant>
+
+    <package name="default" namespace="/" extends="json-default">
+
+        <default-action-ref name="index" />
+
+        <global-results>
+            <result name="error">/error.jsp</result>
+        </global-results>
+
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.Exception" result="error"/>
+        </global-exception-mappings>
+        
+        <action name="index">
+        	<result>/index.jsp</result>
+        </action>
+        <action name="error">
+        	<result>/error.jsp</result>
+        </action>
+        
+        <action name="validateImageAction"  class="validateImageAction">
+        	<result name="success" type="stream">
+	       		<param name="validataImg">inputStream</param>
+	          	<param name="contentType">image/jpeg</param>
+      		</result>
+        </action>
+        
+        <!-- 
+        <action name="validateUser"  class="userAction" method="queryById">
+        	<result type="json"></result>
+        </action>
+         -->
+    </package>
+    
+    <package name="user" namespace="/user" extends="default">
+    	<action name="index"  class="userAction" method="userIndex">
+        	<result type="json"></result>
+        </action>
+   		<action name="query_*_random"  class="{1}Action" method="queryByRandom">
+        	<result type="json"></result>
+        </action>
+        <action name="query_*_user"  class="{1}Action" method="queryByUser">
+        	<result type="json"></result>
+        </action>
+        <action name="query_*_id"  class="{1}Action" method="queryById">
+        	<result type="json"></result>
+        </action>
+        <action name="add_*"  class="{1}Action" method="add">
+        	<result type="json"></result>
+        </action>
+        <action name="delete_*"  class="{1}Action" method="delete">
+        	<result type="json"></result>
+        </action>
+        <action name="update_*"  class="{1}Action" method="update">
+        	<result type="json"></result>
+        </action>
+        <action name="queryMyInfo"  class="userAction" method="queryMyInfo">
+        	<result type="json"></result>
+        </action>
+        <action name="updateIcon"  class="userAction" method="updateIcon">
+        	<result type="json"></result>
+        </action>
+        <action name="updateRole"  class="userAction" method="updateRole">
+        	<result type="json"></result>
+        </action>
+        <action name="updateSignature"  class="userAction" method="updateSignature">
+        	<result type="json"></result>
+        </action>
+        <action name="showPicByUser"  class="transactionRecordAction" method="showPicByUser">
+        	<result type="json"></result>
+        </action>
+        <action name="query_*_page"  class="{1}Action" method="queryByPage">
+                <result type="json"></result>
+        </action>
+    </package>
+    
+    <package name="admin" namespace="/admin" extends="user">
+        <action name="upload_location"  class="locationAction" method="upload">
+                <result type="json"></result>
+        </action>
+    </package>
+
+</struts>

@@ -1,0 +1,59 @@
+/*---main---*/
+.module_title .settings{
+	float:right;
+	height:33px;
+	line-height:33px;
+	overflow:hidden;
+	font-size:12px;
+	font-weight:normal;
+	margin-right:12px;
+	cursor:pointer;
+	color:#000;
+}
+.module_title span{
+	display:block;
+	float:left;
+	width:63px;
+	text-align:center;
+	height:30px;
+	line-height:30px;
+	overflow:hidden;
+	cursor:pointer;
+	padding:0;
+}
+.tag_state{
+	position:relative;
+	top:0;
+	font-size:13px;
+	font-weight:normal;	
+	border:2px solid #FFF;
+	padding:4px 4px;
+}
+.tag_state.focus{ font-weight:bolder; border:2px solid orange; border-bottom:2px solid #FFF; top:3px; }
+/*************************/
+#userPanel .lifeWall{
+  float:left;
+  width:460px;
+}
+#userPanel .memorandum{
+	float:left;
+	width:355px;
+}
+#userPanel .task{
+	float:right;
+	width:420px;
+}
+#userPanel .transaction{
+	float:right;
+	width:495px;
+}
+#userPanel .dairy{
+	float:left;
+	width:280px;
+	margin-bottom:0;
+}
+#userPanel .easyNote{
+	float:right;
+	width:320px;
+	margin-bottom:0;
+}

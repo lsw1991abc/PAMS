@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+			http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+			http://www.springframework.org/schema/security 
+			http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+	<!-- debug / -->
+	<http pattern="/index.jsp*" security="none" />
+	<http pattern="/register.jsp*" security="none" />
+	<http pattern="/**/**.css" security="none" />
+	<http pattern="/**/**.js" security="none" />
+	<http pattern="/**/**.png" security="none" />
+	<http pattern="/**/**.jpg" security="none" />
+	<http pattern="/header.jsp" security="none" />
+	<http pattern="/footer.jsp" security="none" />
+	<http pattern="/login.jsp*" security="none" />
+	<http pattern="/contact/**" security="none" />
+	<http pattern="/validateImageAction" security="none" />
+	<http pattern="/reg.jsp*" security="none" />
+	<http pattern="/validateUser.jsp*" security="none" />
+	<http pattern="/queryByParent.jsp*" security="none" />
+	<http pattern="/error*" security="none" />
+	<http pattern="/error.jsp*" security="none" />
+	
+	
+	 <http use-expressions="true" access-denied-page="/error.jsp?error=403">
+	 	<intercept-url pattern="/admin/admin.jsp*" access="hasRole('ROLE_SUPER')"/>
+	 	<intercept-url pattern="/admin/index.jsp*" access="hasAnyRole('ROLE_SUPER','ROLE_ADMIN')"/>
+	 	<intercept-url pattern="/admin/upload/**" access="hasAnyRole('ROLE_SUPER','ROLE_ADMIN')"/>
+	 	<intercept-url pattern="/user/**" access="hasAnyRole('ROLE_SUPER','ROLE_ADMIN','ROLE_USER')"/>
+	 	<intercept-url pattern="/apps/**" access="hasAnyRole('ROLE_SUPER','ROLE_ADMIN','ROLE_USER')"/>
+	 	<intercept-url pattern="/**" access="isAuthenticated()"/>
+	 	<form-login login-page="/index.jsp" default-target-url="/user/index.jsp" always-use-default-target="true" authentication-failure-url="/error.jsp?error=logfail"/>
+	 	<logout logout-success-url="/index.jsp" />
+	 </http>
+	 
+	 <authentication-manager>
+	 	<authentication-provider user-service-ref="userService">
+	 	    <password-encoder hash="md5"></password-encoder>
+	 	 </authentication-provider>
+	 </authentication-manager>
+
+</beans:beans>

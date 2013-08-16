@@ -1,0 +1,72 @@
+#shade_content p.shade_content_head{
+	height:35px;
+	line-height:35px;
+	margin-bottom:8px;
+	border-bottom:1px solid #F1F1F1;
+}
+#shade_content p input.shade_content_title, #shade_content p span.shade_content_title{
+	margin:3px;
+	height:27px;
+	line-height:27px;
+	width:500px;
+}
+#shade_content p, #shade_content span, #shade_content label, #shade_content select, #shade_content input {
+	display:block;	
+}
+#shade_content span.shade_content_title, #shade_content label, #shade_content span, #shade_content input, #shade_content select{
+	float:left;
+}
+#shade_content span.shade_content_close{
+	float:right;
+	cursor:pointer;
+}
+#shade_content span.shade_content_close:hover{
+	color:orange;
+	text-decoration:underline;
+}
+#shade_content p{
+	height:auto;
+}
+#shade_content span, #shade_content label, #shade_content input, #shade_content textarea, #shade_content select{
+	margin:5px;
+}
+#shade_content div p span{
+	border:1px solid #F1F1F1;
+}
+#shade_content div p label, #shade_content select, #shade_content input.text, #shade_content span.text{
+	height:28px;
+	line-height:28px;
+}
+#shade_content div p label{
+	width:75px;
+	text-align:right;
+}
+#shade_content input.text, #shade_content textarea, #shade_content select, #shade_content input.shade_content_title{	
+	border:1px solid #0FF;
+}
+#shade_content select, #shade_content input.text, #shade_content span.text {
+	width:200px;
+}
+#shade_content span.direction, #shade_content textarea.direction{
+	height:230px;
+	width:780px; 
+	word-break:break-all;
+	white-space:normal;
+	line-height:28px;
+	 font-size:16px;
+}
+#shade_content span.direction{
+	overflow: auto;
+}
+#shade_content input.btn, #shade_content input.btnL{
+	margin:10px;
+	height:30px;
+	line-height:25px;
+	width:60px;
+}
+#shade_content input.btnL{
+	margin-left:150px;
+}
+#shade_content textarea{
+	resize:none;
+}

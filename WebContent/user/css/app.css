@@ -1,0 +1,119 @@
+#userPanel h2 {
+	background-color:#FFF;
+	padding-left:20px;
+	height:35px;
+	line-height:35px;
+	border-bottom:3px solid orange;
+}
+#appHead {
+	height:40px;
+	line-height:40px;
+	padding-left:50px;
+	background-color:#FFF;
+	border-bottom:1px solid #f1f1f1;
+}
+#appHead span{
+	display:block;
+	float:left;
+	padding:0 10px;
+	cursor:pointer;
+}
+#appHead span:hover{
+	color:orange;
+	text-decoration:underline;
+}
+/*   body   */
+#appBody {
+	position:relative;
+	min-height:580px;
+	padding:5px;
+	background-color:#FFF;
+}
+#appBody ul li{
+	height:28px;
+	line-height:28px;
+	border-bottom:1px solid #F4F4F4;
+}
+#appBody ul li span{
+	display:block;
+	float:left;
+	text-align:center;
+}
+#appBody ul li span.item_title{
+	text-align:left;
+	cursor:pointer;
+}
+#appBody ul li span.item_title:hover{
+	color:orange;
+	text-decoration:underline;
+}
+#appBody ul li span.item_icon{
+	width:70px;
+}
+#appBody ul li span.item_time{
+	width:160px;
+}
+#appBody ul li span.item_tel{
+	width:120px;
+}
+#appBody ul li span.item_head_edit{
+	width:80px;
+}
+#appBody ul li span.item_email{
+	width:210px;
+}
+#appBody ul li span.item_edit{
+	width:80px;
+	cursor:pointer;	
+}
+#appBody ul li span.item_edit:hover{
+	color:orange;
+	text-decoration:underline;
+}
+/*  foot   */
+#appFoot {
+	border-top:1px solid orange;
+	position:relative;
+	padding:10px 10px;
+	background-color:#FFF;
+	text-align:right;
+}
+#appFoot .page_selector{
+	cursor:pointer;
+}
+#appFoot .page_selector:hover{
+	color:orange;
+	text-decoration:underline;
+}
+
+/*  lifewall*/
+.lwItem{
+	position:absolute;
+	width: 180px;	
+	padding:5px;
+	border:1px solid #000;
+	background:#cce8cf;
+}
+.lwItem.focus{
+	z-index:100;
+}
+.lwItem b{
+	display:block;
+	font-weight:normal;
+}
+.lwItem b.lwItem_title{
+	height:20px;
+	border-bottom:1px dotted #036;
+	cursor:move;
+}
+.lwItem b.lwItem_body{
+	height: 150px;
+	widthth:170px;
+	word-break:break-all;
+	overflow:auto;
+}
+.lwItem b.lwItem_foot{
+	border-top:1px dotted #036;
+	height:20px;
+	text-align:right;
+}

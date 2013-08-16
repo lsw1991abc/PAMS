@@ -1,0 +1,97 @@
+span, h2{
+	display:block;
+}
+/*---main---*/
+#main{
+	width:100%;
+	min-width:1000px;
+	height:400px;
+	overflow:hidden;
+	position:relative;
+}
+#main .main{
+	width:1000px;
+	min-width:1000px;
+	margin:0 auto;
+	z-index:10;
+	position:relative;
+}
+#main .main h2, #main .main .loginBg, #main .main .login{
+	position:absolute;
+	width:300px;
+	left:630px;
+	color:#FFF;
+}
+#main .main h2{
+	height:40px;
+	top:25px;
+	text-align:center;
+	line-height:40px;
+	background-color:#000;
+}
+#main .main .loginBg, #main .main .login{
+	height:300px;
+	top:65px;
+	overflow:hidden;
+	font-size:16px;
+	font-weight:bold;
+}
+#main .main .loginBg{
+	background-color:#333;
+	opacity:0.5;
+	filter: alpha(opacity=50);
+}
+#main .main .login td{
+	/*height:30px;*/
+	height:38px;
+}
+#main .main .login a{
+	color:#FFF;
+	font-size:12px;
+	font-weight:normal;
+}
+#main .main .login a:hover{
+	color:#000;
+}
+#main .main .login .loginbtn{
+	height:30px;
+	width:200px;
+	text-align:center;
+	line-height:30px;
+	background-image:url(../image/loginbtn.png);
+	background-position:top;
+	cursor:pointer;
+}
+#main .main .selector{
+	position:absolute;
+	top:370px;
+	left:300px;
+}
+#main .main .selector span{
+	float:left;
+	margin:0 10px;
+	width:10px;
+	height:10px;
+	cursor:pointer;
+	background-image:url(../image/index_selector.png);
+	background-position:top;
+}
+#indexBg, .indexBg_c{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	min-width:1000px;
+	height:400px;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+/*---end main---*/
+/*---download---*/
+#download{
+	width:276px;
+	height:36px;
+	margin:20px auto;
+	background-image:url(../image/icon_client.gif);
+}
+/*---end download---*/
